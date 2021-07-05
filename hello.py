@@ -1,4 +1,8 @@
 #! /usr/bin/python
+ 
+import sys
 
-print('Hello bioinformatics')
+name = sys.argv[1]
+
+print(f'Hello {name}')
 
