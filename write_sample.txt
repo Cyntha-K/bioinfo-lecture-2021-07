@@ -1,2 +1,0 @@
-Hello
-write_sample text file
