@@ -1,16 +1,22 @@
-num = input("number?")
+n = input("number?")
 
-base_data = ["A", "T", "G", "C"]
+n = int(n)
 
-
-def kmer(base):
-    base += base
-    return base
+base_data1 = ["A", "T", "G", "C"]
+base_data2 = ["A", "T", "G", "C"]
 
 
-for i in range(num):
-    for base in base_data:
-        kmer(base)
-    print(kmer)
+def kmer(base_data1, base_data2, n):
+    if n < 2:
+        return base_data2
+    else:
+        l_temp = []
+        for base1 in base_data1:
+            for base2 in base_data2:
+                l_temp.append(base1 + base2)
+        return kmer(base_data1, l_temp, n - 1)
 
-print(f"{num}mer: ", kmer)
+
+kmer_list = kmer(base_data1, base_data2, n)
+
+print(f"{n}mer: ", kmer_list)
