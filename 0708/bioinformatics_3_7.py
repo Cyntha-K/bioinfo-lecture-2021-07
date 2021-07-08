@@ -20,8 +20,8 @@ while True:
     else:
         position = int(position)
         seq_len = len(seq)
-        if 1 <= position <= seq_len - 3:
-            sliced_seq = seq[position : position + 3]
+        if 1 <= position <= seq_len - 2:
+            sliced_seq = seq[position : position + 2]
             print(f"Three amino acids: {sliced_seq}")
         else:
             print("Invalid range position value.")
